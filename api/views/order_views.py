@@ -19,11 +19,9 @@ class addOrderItems(APIView):
     def post(self, request):
         user = request.user 
         data = request.data 
-        print('data', data)
 
         # это очень небезопасно доставать напрямую, ловятся ошибки keyError. 
         orderItems = data['orderItems']
-        print('len', len(orderItems))
         if not orderItems or len(orderItems) == 0:
             return Response({'detail': 'No order items'}, status=status.HTTP_400_BAD_REQUEST)
         else: 

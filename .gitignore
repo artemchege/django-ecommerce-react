@@ -1,0 +1,10 @@
+/__pycache__/
+__pycache__
+.env
+db*
+venv/
+static/images/*.png
+static/images/*.jpg
+staticfiles/images/*.png
+staticfiles/images/*.jpg
+.git/

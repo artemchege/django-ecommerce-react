@@ -179,8 +179,8 @@ AWS_SECRET_ACCESS_KEY = env('AWS_SECRET_ACCESS_KEY')
 AWS_STORAGE_BUCKET_NAME = 'proshop-bucket-artemchege'
 AWS_QUERYSTRING_AUTH = False
 
-#if os.getcwd() == '/app': 
-#    DEBUG = False
+if os.getcwd() == '/app': 
+    DEBUG = False
 
 
 

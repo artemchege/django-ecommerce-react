@@ -133,7 +133,6 @@ class finishOrder(APIView):
 
         if session_id:
             stripe.api_key = settings.STRIPE_SECRET_KEY
-            print('stripe.api_key', stripe.api_key)
             session = stripe.checkout.Session.retrieve(session_id)
 
             if session.payment_status == 'paid':

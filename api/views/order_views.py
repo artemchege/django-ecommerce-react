@@ -132,10 +132,7 @@ class finishOrder(APIView):
         order_id = request.GET.get('order')
 
         if session_id:
-            try:
-                session = stripe.checkout.Session.retrieve(session_id)
-            except Exception as e:  # InvalidRequestError
-                return Response({'Invalid Stripe session'}, status=status.HTTP_400_BAD_REQUEST)
+            session = stripe.checkout.Session.retrieve(session_id)
 
             if session.payment_status == 'paid':
                 order = Order.objects.get(_id=session.client_reference_id)

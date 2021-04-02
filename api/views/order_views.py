@@ -142,11 +142,10 @@ class finishOrder(APIView):
                 order.isPaid = True 
                 order.paidAt = datetime.now()
                 order.save()
-
-                # change it later when react + django finaly combined
-                return redirect('http://127.0.0.1:3000/order/' + order_id)
+             
+                return redirect('http://' + request.META['HTTP_HOST'] + '/#/order/' + order_id) 
             else:
-                # add error field to Order model, edir error field here (later)
+                # add an error field to Order model, edit error field here (later)
                 return redirect('http://127.0.0.1:3000/order/' + order_id)
 
 

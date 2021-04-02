@@ -13,7 +13,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '#!heyw0sa_jq0+(+yo_a9p4r!5*0aki@kuhl$+)1_q$3qgr9)j'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['192.168.200.183', '127.0.0.1', 'django-react-eshop.herokuapp.com']
 
